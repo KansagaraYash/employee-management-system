@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('type',['SA','CA','E','C'])->comment("SA=super admin, CA=company admin,E=Employee, C=candidate");
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->date('dob')->nullable();
             $table->string('address', 255)->nullable();
             $table->string('city')->nullable();
